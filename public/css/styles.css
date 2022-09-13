@@ -1,0 +1,261 @@
+:root {
+    --primaryFont: 'Roboto', sans-serif;
+    --secondaryFont:'Lobster', cursive;
+    --sm: 16px;
+    --md: 18px;
+    --lg: 24px;
+    --ssm: 12px;
+    --amarillo: #EAC926;
+    --azul: #03264C;
+    --celeste: #1259c3;
+    --grisOscuro: #666;
+    --grisClaro: #ebebeb;
+    --verde: #39b54a;
+    }
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto','sans-serif';
+    margin: auto;
+    font-size: 12px;
+    background-color: var(--grisClaro);
+    max-width: 1200px;
+}
+header{
+    background-color: var(--amarillo);
+    padding: 20px 15px 20px 15px;
+}
+.main-header-top-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.main-header-top-bar, .main-navbar{
+    max-width: 1200px;
+    
+}
+.logo {
+    width: 45%;
+    margin-right: 10px;
+    max-width: 200px;
+}
+.search-form {
+    max-width: 220px;
+    width: 45%;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    height: 35px;
+    display: none;
+    align-items: center;
+}
+.search-form button{
+    border: none;
+    background-color: white;
+}
+#search-bar {
+    border: none;
+    width: 90%
+}
+
+.cuotas{
+    text-align: center;
+    padding: 20px 0;
+}
+nav {
+    display:none;
+}
+.main-navbar ul {
+    list-style: none;
+    padding-left: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.burger-menu{
+    text-align: center;
+    background-color: var(--celeste);
+    color: white;
+    max-width: 40px;
+    padding: 8px 0;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+}
+.banner{
+    width: 100%;
+}
+main{
+    width: 90vw;
+    margin: 0 auto;
+}
+.titular{
+    font-size: 24px;
+}
+article{
+    background-color: white;
+    margin: 10px;
+}
+article:hover {
+    box-shadow: 0 0 10px rgb(100, 100, 100);
+}
+article:hover .description{
+    display: block;
+}
+article:hover .card i{
+    transform: rotate(-90deg);
+}
+article img {
+    width: 100%;
+}
+.card {
+    border-top: 1px solid var(--grisClaro);
+    padding: 15px;
+    position: relative;
+}
+.card i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--verde);
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -30px;
+    color:var(--verde) ;
+    transition: transform 0.5s;
+}
+.price-discount {
+    display: flex;
+}
+.price {
+    font-size: 18px;
+    margin: 0;
+    width: 30%;
+    text-align: left;
+}
+.discount {
+    font-size: 16px;
+    margin: 0;
+    color: var(--verde);
+    width: 70%;
+    text-align: right;
+}
+.description{
+    font-size: 16px;
+    color: var(--grisOscuro);
+    font-weight: 100;
+    margin: 15px 0 0 0 ;
+    display: none;
+    transition: display 0.5s;
+}
+
+
+footer{
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+}
+section i {
+    font-size: 2em;
+    margin: 15px 0;
+    color: var(--celeste);
+}
+section i:hover {
+    color: var(--azul);
+}
+footer h3, footer p {
+    margin:0px;
+}
+.register-form, .login{
+    max-width: 300px;
+    margin: auto;
+}
+.register-form input, .login input{
+    border: none;
+    margin: 15px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+.register-form h2 {
+    padding: 15px;
+}
+.user-profile {
+    display: flex;
+    justify-content: space-around;
+}
+.user-profile p input{
+    width: auto;
+}
+.user-interest p input {
+    width: auto;
+    margin-left: 40px;
+}
+.button{
+    width: 100%;
+    margin: 10px 15px;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    background-color: var(--celeste);
+    color: white;
+}
+.button:hover{
+    background-color: #0022AA;
+}
+@media (min-width: 362px) {
+    .container-articles{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .search-form {
+        display: flex;
+    }
+}
+@media (min-width: 362px) and (max-width: 768px){
+    article {
+        width: 44%;
+        margin: 5px;
+    }
+}
+@media (min-width: 769px) {
+    article {
+        width: 22%;
+    }
+    .burger-menu{
+        display: none;
+    }
+    .main-navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+    .main-header-top-bar {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .left-navbar, .right-navbar{
+        display: flex;
+        flex-grow: 0.25;
+        justify-content: space-around;
+    };
+    .cuotas{
+        max-width: 250px;
+        text-align: right;
+    }
+    footer {
+        display: flex;
+    };
+}
