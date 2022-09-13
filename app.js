@@ -8,7 +8,7 @@ app.use( express.static(publicPath));
 app.set('puerto', process.env.PORT || 3001);
 
 app.listen(app.get('puerto'), () => 
-console.log(`Servidor corriendo en el puerto 3000 ${app.get('puerto')}`));
+console.log(`Servidor corriendo en el puerto ${app.get('puerto')}`));
 
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, "./views/home.html"));
